@@ -1,6 +1,9 @@
 package com.bz.day4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class BasicProgram {
 	public static void main(String[] args) {
@@ -119,9 +122,51 @@ public class BasicProgram {
 			break;
 		}
 		
-		Random random = new Random();
-		random.doubles();
+		//assignment
+	a = 29347;
+		//loops
 		
-		Math.random();
+		// 1 for 2 while 3 do _ while
+		
+//		for(initilizatioin ; condition ; increament/decreament)
+			
+//		for(int i = 0; i==10; ) {
+//			System.out.println(i);
+//			i++;
+//		}
+		
+//		int j=0;
+//		while(j<10) {
+//			System.out.println(j);
+//			j = 9;
+//		}
+//		Scanner scanner = new Scanner(System.in);
+//		int choose = 1;
+//		do {
+//			System.out.println("Enter Number for factorial");
+//			int numberF = scanner.nextInt();
+//			int fact = 1;
+//			for(int i = 1;i<=numberF; i++) {
+//				fact = fact * i;
+//			}
+//			
+//			System.out.println("Factorial of Number is = "+ fact);
+//			System.out.println("Do you want to continue : press 1 to contieu or");
+//			choose = scanner.nextInt();
+//		}while(choose == 1);
+		
+		//increment and decrement
+	
+		int x = 5;
+		
+		System.out.println("x = "+x);
+		 //x = x+1; // post increment
+		System.out.println("post dec x = "+x--);
+		System.out.println("x = "+x);
+		
+		--x;
+		
+		System.out.println("x = "+x++);
+		System.out.println("x = "+x);
 	}
 }
