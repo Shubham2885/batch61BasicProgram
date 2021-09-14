@@ -168,5 +168,35 @@ public class BasicProgram {
 		
 		System.out.println("x = "+x++);
 		System.out.println("x = "+x);
+		
+		int row = 3;
+		int col = 3;
+		//declare
+		int twoDarray[][] = new int[row][col];
+		
+		int anther2DArray[][] = {
+				{1,2,3,33},{4,5,6,44},{7,8,9,66}	
+		};
+		
+		//printing the row
+		for(int i=0;i<row;i++) {
+			for(int j=0;j<col+1;j++) {
+				System.out.print("["+i+"]["+j+"] = "+anther2DArray[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		
+		for(int i=0;i<row;i++) {
+			for(int j=0;j<col;j++) {
+				twoDarray[i][j] = (j+1)* 5;
+			}
+		}
+		
+		for(int i=0;i<row;i++) {
+			for(int j=0;j<col;j++) {
+				System.out.print("["+i+"]["+j+"] = "+twoDarray[i][j]+"\t");
+			}
+			System.out.println();
+		}
 	}
 }
