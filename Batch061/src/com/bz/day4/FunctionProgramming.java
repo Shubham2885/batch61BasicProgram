@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class FunctionProgramming {
 	
+	
+	
 	public static int performFactorial(int number) {
 		System.out.println("Enter Number for factorial");
 //		int numberF = 5;

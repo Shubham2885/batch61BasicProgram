@@ -1,5 +1,6 @@
 package com.bz.day4;
 
+//pojo class
 public class Account {
 
 	//properties
@@ -8,6 +9,16 @@ public class Account {
 	private int accountNo;
 	private int balance;
 	
+	public Account(String name, String branch, int accountNo, int balance) {
+		this.name = name;
+		this.branch = branch;
+		this.accountNo = accountNo;
+		this.balance = balance;
+	}
+	
+	public Account() {
+		
+	}
 	
 	public String getName() {
 		return name;
@@ -36,5 +47,10 @@ public class Account {
 	public void showBalance() {
 		int bonus = 1000;
 		System.out.println(name+" of Balance = "+(balance+bonus));
+	}
+	@Override
+	public String toString() {
+		return "Account [name=" + name + ", branch=" + branch + ", accountNo=" + accountNo + ", balance=" + balance
+				+ "]";
 	}
 }
