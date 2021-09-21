@@ -24,7 +24,7 @@ public class Main {
 //		Student classD[] = new Student[4];
 		
 		for(int i=0;i<2;i++) {
-			Student student = new Student();
+			Student student = new Student("","",1);
 			String fname = UtilScanner.getString("fname");
 			String lname =UtilScanner.getString("lname");
 			student.setFname(fname);

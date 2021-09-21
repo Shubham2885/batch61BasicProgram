@@ -1,6 +1,6 @@
 package com.bz.day4.interfaces;
 
-public interface IDemo extends SuperDemo, IDemo1{
+public interface IDemo {
 
 	int x = 5;
 	void showDemo();

@@ -4,10 +4,12 @@ public class Student {
 
 	private String fname;
 	private String lname;
-	@Override
-	public String toString() {
-		return "Student [fname=" + fname + ", lname=" + lname + "]";
-	}
+	private int id;
+	
+//	@Override
+//	public String toString() {
+//		return "Student [fname=" + fname + ", lname=" + lname + "]";
+//	}
 	public String getFname() {
 		return fname;
 	}
@@ -20,9 +22,16 @@ public class Student {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-//	public Student(String fname, String lname) {
-//		super();
-//		this.fname = fname;
-//		this.lname = lname;
-//	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Student(String fname, String lname, int id) {
+		this.fname = fname;
+		this.lname = lname;
+		this.id = id;
+	}
 }

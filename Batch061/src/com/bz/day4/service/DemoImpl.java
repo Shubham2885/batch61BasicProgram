@@ -20,10 +20,10 @@ public class DemoImpl implements IDemo , IDemo1{
 		System.out.println("Hello Interface Demo1");
 	}
 
-	@Override
-	public void superMethod() {
-		System.out.println("Super method");
-	}
+//	@Override
+//	public void superMethod() {
+//		System.out.println("Super method");
+//	}
 
 	@Override
 	public void something() {
