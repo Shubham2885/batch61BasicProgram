@@ -13,5 +13,6 @@ public class GenericDemo {
 		
 		classDemo.compare(classDemo.getX(), classDemo.getY());
 		stringDemo.compare(stringDemo.getX(), stringDemo.getY());
+		
 	}
 }

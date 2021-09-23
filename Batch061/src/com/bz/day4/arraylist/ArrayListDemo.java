@@ -20,6 +20,8 @@ public class ArrayListDemo {
 		strings.add("sd");
 		System.out.println(strings);
 		
+		System.out.println(strings.get(3));
+		
 		ArrayList<String> arrayList = new ArrayList<String>();
 		arrayList.add("Shubham");
 		arrayList.add("sdf");
