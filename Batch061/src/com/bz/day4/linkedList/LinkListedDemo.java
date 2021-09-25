@@ -38,7 +38,7 @@ public class LinkListedDemo {
 		linkedList.add("Mukesh");
 		
 		linkedList.printLinkedList();
-		linkedList.pop();
+		
 		System.out.println("After deletion");
 		linkedList.printLinkedList();
 		linkedList.remove("Shubham");
@@ -49,5 +49,7 @@ public class LinkListedDemo {
 		
 		System.out.println("After middle deletion");
 		linkedList.printLinkedList();
+		
+		
 	}
 }

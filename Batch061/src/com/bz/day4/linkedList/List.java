@@ -6,7 +6,9 @@ public interface List <E> {
 	//also used for stack push operation
 	void add(E data);
 	void printLinkedList();
-	//using for stack delete operation
-	void pop();
+	
 	void remove(E data);
+	
+	int size();
+	
 }

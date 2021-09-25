@@ -9,7 +9,7 @@ class Node <E>{
 	}
 }
 
-public class LinkedList <E> implements List<E>{
+public class LinkedList <E> implements List<E>, IStack<E>, IQueue<E>{
 	Node startingNode;
 
 	@Override
@@ -36,6 +36,7 @@ public class LinkedList <E> implements List<E>{
 			System.out.print(temp.data + " -> ");
 			temp = temp.nextAddress;
 		}
+		System.out.println();
 	}
 
 	@Override
@@ -68,8 +69,24 @@ public class LinkedList <E> implements List<E>{
 		}
 		
 	}
-	
-	
+
+	@Override
+	public void deQueue() {
+		Node temp = startingNode;
+		startingNode = temp.nextAddress;
+	}
+
+	@Override
+	public int size() {
+		Node temp = startingNode;
+		int count = 0;
+		while(temp != null) {
+			System.out.print(temp.data + " -> ");
+			temp = temp.nextAddress;
+			count ++;
+		}
+		return count;
+	}
 }
 
 //search(value) retrun boolean 
