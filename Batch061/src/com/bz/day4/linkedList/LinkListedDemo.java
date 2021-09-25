@@ -1,5 +1,7 @@
 package com.bz.day4.linkedList;
 
+import java.util.Date;
+
 public class LinkListedDemo {
 
 	public static void main(String[] args) {
@@ -24,12 +26,28 @@ public class LinkListedDemo {
 //			System.out.print(temp.data + " -> ");
 //			temp = temp.nextAddress;
 //		}
+		List<String> linkedList = new LinkedList<String>();
 		
-		LinkedList.add(12);
-		LinkedList.add(145);
-		LinkedList.add(345);
-		LinkedList.add(4564);
+		linkedList.add("Shubham");
+		linkedList.add("Sankal");
+		linkedList.add("Manoj");
+		linkedList.add("Saikat");
+		linkedList.add("Ashvini");
+		linkedList.add("Dinesh");
+		linkedList.add("Shivani");
+		linkedList.add("Mukesh");
 		
-		LinkedList.printLinkedList();
+		linkedList.printLinkedList();
+		linkedList.pop();
+		System.out.println("After deletion");
+		linkedList.printLinkedList();
+		linkedList.remove("Shubham");
+		System.out.println();
+		System.out.println("After fist deletion");
+		linkedList.printLinkedList();
+		linkedList.remove("Ashvini");
+		
+		System.out.println("After middle deletion");
+		linkedList.printLinkedList();
 	}
 }
