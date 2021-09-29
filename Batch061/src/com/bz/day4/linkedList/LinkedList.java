@@ -40,7 +40,7 @@ public class LinkedList <E> implements List<E>, IStack<E>, IQueue<E>{
 	}
 
 	@Override
-	public void pop() {
+	public E pop() {
 		Node temp = startingNode;
 		Node perv = startingNode;
 		while(temp.nextAddress != null) {
@@ -48,6 +48,7 @@ public class LinkedList <E> implements List<E>, IStack<E>, IQueue<E>{
 			temp = temp.nextAddress;
 		}
 		perv.nextAddress = null;
+		return (E) temp.data;
 	}
 
 	@Override

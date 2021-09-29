@@ -26,7 +26,7 @@ public class LinkListedDemo {
 //			System.out.print(temp.data + " -> ");
 //			temp = temp.nextAddress;
 //		}
-		List<String> linkedList = new LinkedList<String>();
+		IStack<String> linkedList = new LinkedList<String>();
 		
 		linkedList.add("Shubham");
 		linkedList.add("Sankal");
@@ -39,17 +39,18 @@ public class LinkListedDemo {
 		
 		linkedList.printLinkedList();
 		
-		System.out.println("After deletion");
-		linkedList.printLinkedList();
-		linkedList.remove("Shubham");
-		System.out.println();
-		System.out.println("After fist deletion");
-		linkedList.printLinkedList();
-		linkedList.remove("Ashvini");
+//		System.out.println("After deletion");
+//		linkedList.printLinkedList();
+//		linkedList.remove("Shubham");
+//		System.out.println();
+//		System.out.println("After fist deletion");
+//		linkedList.printLinkedList();
+//		linkedList.remove("Ashvini");
+//		
+//		System.out.println("After middle deletion");
+//		linkedList.printLinkedList();
 		
-		System.out.println("After middle deletion");
-		linkedList.printLinkedList();
-		
+		System.out.println(linkedList.pop());
 		
 	}
 }

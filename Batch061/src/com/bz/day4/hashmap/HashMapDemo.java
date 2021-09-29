@@ -16,5 +16,7 @@ public class HashMapDemo {
 		studentData.put("Dinesh", "Address = Dehli");
 		
 		System.out.println(studentData);
+		
+		System.out.println(studentData.get("Shubham"));
 	}
 }
