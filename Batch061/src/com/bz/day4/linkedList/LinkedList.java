@@ -88,6 +88,13 @@ public class LinkedList <E> implements List<E>, IStack<E>, IQueue<E>{
 		}
 		return count;
 	}
+
+	@Override
+	public boolean isEmply() {
+		if(startingNode == null)
+			return true;
+		return false;
+	}
 }
 
 //search(value) retrun boolean 

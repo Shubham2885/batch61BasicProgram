@@ -5,5 +5,6 @@ public interface IStack<E> {
 	void add(E data);
 	//using for stack delete operation
 	E pop();
+	boolean isEmply();
 	void printLinkedList();
 }

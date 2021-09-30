@@ -13,34 +13,33 @@ public class StringDemo {
 		for(int i=0;i<exp.length();i++) {
 			char ch = exp.charAt(i);
 			String x = Character.toString(ch);
-			
-			if(!x.equals("(")  && !x.equals(")")) {
-				iStack.add(x);
-			}
-			
-			if(x.equals(")")) {
-				String firstOp = iStack.pop();
-				String op = iStack.pop();
-				String SecondOp = iStack.pop();
-				iStack.add(getResult(firstOp,SecondOp,op));
-			}
-			
+
+			iStack.add(x);
 		}
 		iStack.printLinkedList();
+		
+		int result = 0;
+		while(!iStack.isEmply()) {
+			String x = iStack.pop();
+			if(x.equals(")")) {
+				String fo = iStack.pop();
+				String op = null;
+			}
+		}
 	}
 	
-	static String getResult(String fo, String so, String op) {
+	static int getResult(String fo, String so, String op) {
 		switch (op) {
 		case "+":
 			Integer result1 = Integer.parseInt(fo) + Integer.parseInt(so);
-			return result1.toString();
+			return result1;
 		case "-":
 			Integer result2 = Integer.parseInt(fo) - Integer.parseInt(so);
-			return result2.toString();
+			return result2;
 		default:
 			break;
 		}
-		return null;
+		return 0;
 	}
 	
 }
