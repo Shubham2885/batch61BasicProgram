@@ -27,16 +27,16 @@ public class StudentServiceImplTest {
 		Student student = new Student(33,"Dummy","Dummy");
 		students.add(student);
 		EasyMock.expect(doa.findAllStudents()).andReturn(students);
-		
+		EasyMock.expect(doa.addNewStudent(EasyMock.anyObject())).andReturn(Integer.valueOf(6));
 		EasyMock.replay(doa);
 	}
 	
-//	@Test
-//	public void addNewStudentTest() {
-//		Student student = new Student(1,"Shubham","Chavan");
-//		int index = service.addNewStudent(student);
-//		assertEquals(2, index);
-//	}
+	@Test
+	public void addNewStudentTest() {
+		Student student = new Student(1,"Shubham","Chavan");
+		int index = service.addNewStudent(student);
+		assertEquals(6, index);
+	}
 	
 	@Test
 	public void findAllStudentTest() {
@@ -44,11 +44,11 @@ public class StudentServiceImplTest {
 		assertEquals(1, service.findAllStudents().size());
 	}
 	
-	@Test
-	public void findByIdTest() {
-		
-		Student student = service.findStudentById(33);
-		assertNotNull(student);
-		assertEquals("Dummy", student.getFname());
-	}
+//	@Test
+//	public void findByIdTest() {
+//		
+//		Student student = service.findStudentById(33);
+//		assertNotNull(student);
+//		assertEquals("Dummy", student.getFname());
+//	}
 }

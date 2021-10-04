@@ -3,6 +3,8 @@ package com.bz.day4.studentmanagement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bz.day4.exceptionhandling.custom.CustomException;
+
 public class StudentServiceImpl implements IStudentService  {
 	
 	IStudentDoa doa;
@@ -18,7 +20,7 @@ public class StudentServiceImpl implements IStudentService  {
 	}
 
 	@Override
-	public Student findStudentById(int id) {
+	public Student findStudentById(int id) throws CustomException.StudentNotFoundException, NullPointerException{
 		List<Student> students = doa.findAllStudents();
 		for(int i=0;i<students.size();i++) {
 			Student student = students.get(i);
@@ -26,12 +28,16 @@ public class StudentServiceImpl implements IStudentService  {
 				return student;
 			}
 		}
-		return null;
+		throw new CustomException.StudentNotFoundException("Student Not Found");
 	}
 
 	@Override
-	public List<Student> findAllStudents() {
-		return doa.findAllStudents();
+	public List<Student> findAllStudents() throws CustomException.DataNotFoundException{
+		List<Student> students = doa.findAllStudents();
+		if(students.isEmpty()) {
+			throw new CustomException.DataNotFoundException("Data Not Found");
+		}
+		return students;
 	}
 
 }

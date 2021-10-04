@@ -29,6 +29,10 @@ public class Student {
 		this.fname = fname;
 		this.lname = lname;
 	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", fname=" + fname + ", lname=" + lname + "]";
+	}
 	
 	
 }
